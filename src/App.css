@@ -1,0 +1,165 @@
+.App {
+  margin: 0px;
+  margin-top: 0px;
+  font-family: 'Josefin Sans', sans-serif !important;
+  font-size: 15px;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.home {
+  margin: 20px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+form  { display: block;      }
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.main {
+  margin: 5%;
+  margin-top: 3%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 30px; 
+}
+
+.user {
+  margin: 1%;
+  margin-top: 2%;
+}
+
+.user-table.ui.table {
+  margin: 2.5%;
+}
+
+.blog {
+  width: 100%;
+}
+
+.segment-cover {
+  margin: 20px;
+}
+
+.ui.card>.image>img, img {
+  width: 100%;
+}
+
+.nav-bar {
+  font-size: 140%;
+}
+
+.launch {
+  margin-top: 0px;
+}
+
+.login-bg {
+  background-color: #1DCAFF;
+}
+
+.motto {
+  text-align: center;
+  font-size: 250%;
+  padding-top: 5%;
+  word-spacing: 4rem;
+  font-family: 'Lobster', cursive;
+  color: #707070;
+}
+
+.title {
+  text-align: center;
+  font-size: 250%;
+  padding-top: 10%; 
+  font-family: 'Lobster', cursive;
+  color: #707070;
+}
+
+#login.ui.button {
+  background-color: #FFF;
+  color: #1DCAFF;
+  border-radius: 35px;
+  width: 15%;
+  margin: 3%;
+  font-size: 120%;
+  position: absolute;
+  top: 30%;
+  left: 65%;
+}
+
+#signup.ui.button {
+  background-color: #FFF;
+  color: #1DCAFF;
+  border-radius: 35px;
+  width: 15%;
+  margin: 3%;
+  font-size: 120%;
+  position: absolute;
+  top: 40%;
+  left: 65%;
+}
+
+.ui.button i.icon {
+  color: #1DCAFF;
+}
+
+.ui.input>input {
+  max-width: 300%;
+}
+
+.ui.form .field .ui.input input, .ui.form .fields .field .login-input.ui.input input {
+  width: 300%;
+}
+
+.btn {
+  background-color: #4facfe;
+}
+
+.ui.secondary.menu .item {
+  font-family: 'Ranchers', cursive;
+  color: red;
+  margin: 0;
+}
+
+.ui.menu {
+  margin: 0;
+}
+
+
+.logo {
+  font-size: 26px;
+}
+
+.crd-img {
+ background-size: contain;
+ height: 180px;
+}
