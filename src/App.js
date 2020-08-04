@@ -10,7 +10,7 @@ import { initializeBlog } from './reducers/blogReducer'
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom'
 import { logout } from './reducers/loginReducer'
 import './App.css'
-
+import './Queries.css'
 
 const App = () => {
   const dispatch = useDispatch()

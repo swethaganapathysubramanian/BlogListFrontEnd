@@ -6,14 +6,13 @@ import { Button, Icon } from 'semantic-ui-react'
 const LaunchPage = ( { handleOpen, addHandleOpen }) => {
   return(
     <div className='launch'>
-      <div style={{ width: '100vw', overflow:'auto'}} >
-        <div style={{float:'left', width: '50vw' }}>
-          <div style={{ height: '15vh' }}> </div>
-        <img src = {posts} alt='Launch Page Image' style={{ height: '50vh' }} />
+      <div className='l-page' >
+        <div className='launch-image'>
+          <div  className='page-top'> </div>
+          <img src = {posts} alt='Launch Page Image' />
           <div className='motto'>Imagine. Create. Share.</div>
         </div>
-        
-        <div className='login-bg' style={{ float: 'right', width: '50vw', height:'100vh', backgroundColor:'##1DCAFF'}}>
+        <div className='login-bg'>
           <div style={{ height: '15vh' }} className='title'>Blogopedia </div>
           <Button id='login' className='page' animated onClick={handleOpen}>
             <Button.Content visible>Login</Button.Content>
@@ -27,7 +26,6 @@ const LaunchPage = ( { handleOpen, addHandleOpen }) => {
               <Icon name='add' />
             </Button.Content>
           </Button>
-          
         </div>
       </div>
     </div>

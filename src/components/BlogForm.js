@@ -145,21 +145,27 @@ const BlogForm = ({ handleBlogSubmit, closeModal }) => {
       />
       <strong>Blog Type:</strong> <br/>
       <Form.Group>
-        &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         <Form.Checkbox label='Art' onChange={() => blogTypeCheck('Art')} disabled={blogType.includes('Art')?false:blogType.length >= 3 ? true : false}/> &nbsp;
         <Form.Checkbox label='Beauty/Fashion' onChange={() => blogTypeCheck('Beauty/Fashion')} disabled={blogType.includes('Beauty/Fashion') ? false :(blogType.length >= 3 ? true : false)}/> &nbsp;
         <Form.Checkbox label='Books/Literature' onChange={() => blogTypeCheck('Books/Literature')} disabled={blogType.includes('Books/Literature') ? false :(blogType.length >= 3 ? true : false)}/> &nbsp;
+      </Form.Group>
+      <Form.Group>
+        &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;
         <Form.Checkbox label='Cooking/Food' onChange={() => blogTypeCheck('Cooking/Food')} disabled={blogType.includes('Cooking/Food') ? false :(blogType.length >= 3 ? true : false)}/> &nbsp;
         <Form.Checkbox label='Craft' onChange={() => blogTypeCheck('Craft')} disabled={blogType.includes('Craft') ? false :(blogType.length >= 3 ? true : false)}/> &nbsp;
         <Form.Checkbox label='Cute' onChange={() => blogTypeCheck('Cute')} disabled={blogType.includes('Cute') ? false :(blogType.length >= 3 ? true : false)}/> &nbsp;
         <Form.Checkbox label='Gaming' onChange={() => blogTypeCheck('Gaming')} disabled={blogType.includes('Gaming') ? false :(blogType.length >= 3 ? true : false)}/> &nbsp;
       </Form.Group>
       <Form.Group>
-        &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;
         <Form.Checkbox label='Other' onChange={() => blogTypeCheck('Other')} disabled={blogType.includes('Other') ? false :(blogType.length >= 3?true:false)} /> &nbsp;
         <Form.Checkbox label='Parent' onChange={() => blogTypeCheck('Parent')} disabled={blogType.includes('Parent') ? false :(blogType.length >= 3 ? true : false)}/> &nbsp;
         <Form.Checkbox label='Personal' onChange={() => blogTypeCheck('Personal')} disabled={blogType.includes('Personal') ? false :(blogType.length >= 3 ? true : false)}/> &nbsp;
         <Form.Checkbox label='Photography' onChange={() => blogTypeCheck('Photography')} disabled={blogType.includes('Photography') ? false :(blogType.length >= 3 ? true : false)}/> &nbsp;
+      </Form.Group>
+      <Form.Group>
+        &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;
         <Form.Checkbox label='Shopping/Reviews' onChange={() => blogTypeCheck('Shopping/Reviews')} disabled={blogType.includes('Shopping/Reviews') ? false :(blogType.length >= 3 ? true : false)}/> &nbsp;
         <Form.Checkbox label='Spiritual' onChange={() => blogTypeCheck('Spiritual')} disabled={blogType.includes('Spiritual') ? false : (blogType.length >= 3 ? true : false)} /> &nbsp;
         <Form.Checkbox label='Technology' onChange={() => blogTypeCheck('Technology')} disabled={blogType.includes('Technology') ? false :(blogType.length >= 3 ? true : false)}/> &nbsp;

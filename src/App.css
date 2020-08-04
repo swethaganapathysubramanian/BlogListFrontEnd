@@ -28,12 +28,6 @@
   
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -119,6 +113,33 @@ form  { display: block;      }
   background-color: #1DCAFF;
 }
 
+/* ----------------Launch page--------------- */
+
+.l-page {
+   width: 100vw;
+   overflow:'auto'; 
+}
+
+.launch-image {
+   float: left;
+   width: 50vw; 
+}
+
+.launch-image img {
+  height: 50vh;
+}
+
+.page-top {
+   height: 15vh;
+}
+
+.login-bg {
+   float: right;
+   width: 50vw;
+   height:100vh;
+   background-color:'#1DCAFF';
+}
+
 .motto {
   text-align: center;
   font-size: 250%;
@@ -128,6 +149,7 @@ form  { display: block;      }
   color: #707070;
 }
 
+
 .title {
   text-align: center;
   font-size: 250%;
@@ -135,21 +157,6 @@ form  { display: block;      }
   font-family: 'Lobster', cursive;
   color: #606060;
 }
-
-#div1 {
-  width: 350px;
-  height: 300px;
-  padding: 10px;
-  border: 1px solid #aaaaaa;
-}
-
-#div2 {
-  width: 350px;
-  height: 300px;
-  padding: 10px;
-  border: 1px solid #aaaaaa;
-}
-
 
 #login.ui.button {
   background-color: #FFF;
@@ -186,6 +193,23 @@ form  { display: block;      }
 .ui.form .field .ui.input input, .ui.form .fields .field .login-input.ui.input input {
   width: 300%;
 }
+
+
+#div1 {
+  width: 350px;
+  height: 300px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+
+#div2 {
+  width: 350px;
+  height: 300px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+
+
 
 .btn {
   background-color: #4facfe;
@@ -226,3 +250,12 @@ form  { display: block;      }
   text-align: center;
   left: 25%;
 }
+
+/*-------------- HOME ------------------*/
+
+.home img {
+  height: 200px;
+  width: auto;
+}
+
+/*-------------- MENU ------------------*/

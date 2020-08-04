@@ -74,12 +74,11 @@ const Login = () => {
 
   return(
     <div>
-    
       <LaunchPage handleOpen={handleOpen} addHandleOpen={addHandleOpen} />
       <Modal open={modalOpen} onClose={handleClose} size='small' closeIcon dimmer='blurring'>
-        <Header content='Login into Application' /> 
+        <Header content='Login into Application' />
         <Modal.Content>
-          <Form className='login-input'>
+          <Form className='login-input' autoComplete='off'>
             <Form.Input
               inline
               label="Username: "
