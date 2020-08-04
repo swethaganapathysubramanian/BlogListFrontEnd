@@ -40,7 +40,6 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:3001",
   "devDependencies": {
     "cypress": "^4.10.0",
     "deep-freeze": "0.0.1",
