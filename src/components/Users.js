@@ -13,7 +13,7 @@ const Users = () => {
   return(
     <div className='user'>
       <h2>Users</h2>
-      <Table striped collapsing className='user-table' color='blue'>
+      <Table striped collapsing className='user-table' color='blue' unstackable>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>Name</Table.HeaderCell>

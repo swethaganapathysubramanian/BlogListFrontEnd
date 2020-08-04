@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { Table } from 'semantic-ui-react'
 import { Link } from 'react-router-dom'
 import { useHistory } from 'react-router-dom'
+import noimage from '../images/noimage.jpg'
 //7.14
 const User = ({ users }) => {
   const id = useParams().id
@@ -10,14 +11,16 @@ const User = ({ users }) => {
   const history = useHistory()
 
   if (!user) {
-    history.push('/')
+    history.push('/users')
     return null
   }
+   
 
   return (
     <div className='user'>
+      
       <h2 style={{ textTransform:'capitalize'}}> {user.username} </h2>
-      <h6> Added Blogs </h6>
+      <h3> Added Blogs </h3>
       <Table striped collapsing className='user-table' color='blue'>
         <Table.Header>
           <Table.Row>

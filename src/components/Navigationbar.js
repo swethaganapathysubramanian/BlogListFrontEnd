@@ -7,10 +7,11 @@ import { Menu } from 'semantic-ui-react'
 const Navigationbar = ({ handleLogout }) => {
 
   return (
-    <Menu color='blue' inverted size='massive'>
+    <Menu secondary stackable pointing size='massive'>
       <Link to={'/'}>
         <Menu.Item
           name='BlogList'
+          link
         >
         Blogopedia
         </Menu.Item>
@@ -18,6 +19,7 @@ const Navigationbar = ({ handleLogout }) => {
       <Link to={'/'}>
         <Menu.Item
           name='Blogs'
+          link
         >
           Blogs
         </Menu.Item>
@@ -25,7 +27,7 @@ const Navigationbar = ({ handleLogout }) => {
       <Link to={'/users'}>
         <Menu.Item
           name='BlogList'
-        >
+          link>
           Users
         </Menu.Item>
       </Link>
@@ -33,6 +35,7 @@ const Navigationbar = ({ handleLogout }) => {
         <Menu.Item
           name='Logout'
           onClick={handleLogout}
+          link
         >
           Logout
         </Menu.Item>

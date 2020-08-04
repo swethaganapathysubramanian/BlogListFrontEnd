@@ -1,5 +1,5 @@
 import axios from 'axios'
-const baseUrl = '/api/blogs'
+const baseUrl = 'https://sleepy-crag-33360.herokuapp.com/api/blogs'
 
 let Token = null
 
@@ -15,11 +15,11 @@ const create = newBlog => {
 
   var BlogData = new FormData()
   for (var key in newBlog) {
-    BlogData.append(key, newBlog[key]);
+    BlogData.append(key, newBlog[key])
   }
 
   for (var pair of BlogData.entries()) {
-    console.log(pair[0] + ', ' + pair[1]);
+    console.log(pair[0] + ', ' + pair[1])
   }
 
   const config = {

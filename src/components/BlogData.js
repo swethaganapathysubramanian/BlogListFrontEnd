@@ -4,19 +4,29 @@ import { likeBlog, initializeBlog, addCommentReducer } from '../reducers/blogRed
 //import { useDispatch, useSelector } from 'react-redux'
 import { connect } from 'react-redux'
 import blogService from '../services/blogs'
-import noimage from '../images/noimage.jpg'
-import { Button, Comment, Form, Header } from 'semantic-ui-react'
+//import noimage from '../images/noimage.jpg'
+import person1 from '../images/person1.png'
+import person2 from '../images/person2.png'
+import person3 from '../images/person3.png'
+import person4 from '../images/person4.png'
+import person5 from '../images/person5.png'
+import person6 from '../images/person6.png'
+import blogimage from '../images/blog_img.png'
+import { Button, Comment, Form, Header, Icon, Label } from 'semantic-ui-react'
 //7.15
 const BlogData = ({ blogs, likeBlog, addCommentReducer, user }) => {
   initializeBlog()
   const [update,setUpdate] = useState(0)
   const [blogList, setBlogs] = useState(blogs)
   const [comment, setComment] = useState('')
+  const imageList = [person1, person2, person3, person4, person5, person6]
+  const [value,setVal] = useState(0)
   //const [blog, setBlog] = useState('')
   //console.log('before',blogList)
   const id = useParams().id
   let blog
-  
+  let comVal
+
   useEffect( () => {
     const callthis = async () => {
       const List = await blogService.getAll()
@@ -31,7 +41,6 @@ const BlogData = ({ blogs, likeBlog, addCommentReducer, user }) => {
   console.log('everytime?')
 
  
-
   if(!blog){
     return null
   }
@@ -67,6 +76,10 @@ const BlogData = ({ blogs, likeBlog, addCommentReducer, user }) => {
     console.log(update)
   }
 
+  const commentData = (event) =>{
+    event.preventDefault()
+    setComment(event.target.value)
+  }
  
   const displayImage = (image) => {
     if(image.data){
@@ -86,16 +99,28 @@ const BlogData = ({ blogs, likeBlog, addCommentReducer, user }) => {
 
   
   return(
-    <div className='Blog home'>
-      <h2>{blog.title} by {blog.author} </h2>
-      <a href={blog.url}>{blog.url}</a><br/>
-      <img src={blog.image ? displayImage(blog.image) : noimage} style={{height:300, width:'auto'}}/> <br/>
+    <div className='blog'>
+      <h2>{blog.title} </h2><h3 style={{color:"#606060"}}> &nbsp; by {blog.author} </h3>
+      <div className='blog-data'>
+        <h3> Checkout the Blog @  <a href={blog.url}>{blog.url}</a> </h3> <br />
+      <img src={blog.image ? displayImage(blog.image) : blogimage} style={{height:200, width:'auto'}} draggable/> <br/> <br />
       {console.log(blog.image)}
-      {blog.likes} <button onClick={addLike}>Like</button> <br />
-      {blog.user.username}<br/>
-      added by { blog.user.username } <br/>
-      Instagram: {blog.insta}
-
+      
+      <Button as='div' labelPosition='right'>
+      <Button color='red' onClick={addLike}>
+        <Icon name='heart' />
+        Like
+      </Button>
+      <Label as='a' basic color='red' pointing='left'>
+       {blog.likes}
+      </Label>
+      </Button> <br /> <br />
+    {/* </Button> <button onClick={addLike}>Like</button> <br /> */}
+      This Blog was added by <strong style={{textTransform:'capitalize'}}>{blog.user.username}</strong> <br/><br/>
+      <a href={blog.insta}><Icon color='pink' name='instagram' size='large'/></a>
+      <a href={blog.facebook}><Icon color='blue' name='facebook' size='large' /></a>
+      <a href={blog.twitter}><Icon color='teal' name='twitter' size='large'/></a>
+      <a href={blog.dribble}><Icon color='pink' name='dribbble square' size='large'/></a>
       <br/>
       <Comment.Group>
         <Header as='h3' dividing>
@@ -103,11 +128,11 @@ const BlogData = ({ blogs, likeBlog, addCommentReducer, user }) => {
       </Header>
       <ul>
         {blog.comments.map((comment,index) => comment ? 
-          <Comment.Group>
+          <Comment.Group size='large'>
             <Comment>
-              <Comment.Avatar src={noimage}/>
+              <Comment.Avatar src={imageList[index%6]}/>
               <Comment.Content>
-                <Comment.Author as='a'></Comment.Author>
+                <Comment.Author as='a'>Anonymus</Comment.Author>
                 <Comment.Text>{comment}</Comment.Text>
               </Comment.Content>
             </Comment>
@@ -115,15 +140,15 @@ const BlogData = ({ blogs, likeBlog, addCommentReducer, user }) => {
          : 
          <></>) }
       </ul>
-        <Form reply onChange={({ target }) => setComment(target.value)} >
-          <Form.TextArea />
-          <Button content='Add Comment' labelPosition='left' icon='edit' primary onClick={addCommentData} />
+        <Form reply onChange={commentData} >
+          <Form.TextArea value={comment}/>
+          <Button content='Add Comment Anonymously' labelPosition='left' icon='edit' primary onClick={addCommentData} />
         </Form>
       </Comment.Group>
       {/* <input type = 'text' value= { comment } onChange = {({ target }) => setComment(target.value)}></input>
       <button onClick={ addCommentData } type='submit'>Add Comment </button> <br /> */}
     </div>
-
+    </div>
   )
 }
 

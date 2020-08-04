@@ -3,6 +3,7 @@
   margin-top: 0px;
   font-family: 'Josefin Sans', sans-serif !important;
   font-size: 15px;
+  /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
 }
 
 .App-logo {
@@ -10,8 +11,21 @@
   pointer-events: none;
 }
 
+.heading {
+ background-image: radial-gradient(circle 248px at center, #16d9e3 0%, #30c7ec 30%, #46aef7 100%);
+}
+
+.heading img{
+  position: absolute;
+  left: 10%;
+}
+
 .home {
-  margin: 20px;
+  margin: 1%;
+  margin-top: 0px;
+  margin-left: 15%;
+  padding: 6%;
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -48,10 +62,24 @@ form  { display: block;      }
 
 .main {
   margin: 5%;
-  margin-top: 3%;
+  margin-top: 1%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-gap: 30px; 
+  
+}
+
+.blog {
+  margin: 1%;
+  margin-top: 2%;
+  font-size: 110%;
+  line-height: 140%;
+
+}
+
+.blog-data {
+  margin: 2.5%;
+  margin-top: 1%;
 }
 
 .user {
@@ -73,6 +101,10 @@ form  { display: block;      }
 
 .ui.card>.image>img, img {
   width: 100%;
+}
+
+.ui.card {
+    margin: 1em 10%;
 }
 
 .nav-bar {
@@ -101,34 +133,49 @@ form  { display: block;      }
   font-size: 250%;
   padding-top: 10%; 
   font-family: 'Lobster', cursive;
-  color: #707070;
+  color: #606060;
 }
+
+#div1 {
+  width: 350px;
+  height: 300px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+
+#div2 {
+  width: 350px;
+  height: 300px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+
 
 #login.ui.button {
   background-color: #FFF;
   color: #1DCAFF;
   border-radius: 35px;
-  width: 15%;
+  width: 25%;
   margin: 3%;
   font-size: 120%;
   position: absolute;
   top: 30%;
-  left: 65%;
+  left: 60%;
 }
 
 #signup.ui.button {
   background-color: #FFF;
   color: #1DCAFF;
   border-radius: 35px;
-  width: 15%;
+  width: 25%;
   margin: 3%;
   font-size: 120%;
   position: absolute;
-  top: 40%;
-  left: 65%;
+  top: 45%;
+  left: 60%;
 }
 
-.ui.button i.icon {
+.ui.button i.icon.page {
   color: #1DCAFF;
 }
 
@@ -145,13 +192,23 @@ form  { display: block;      }
 }
 
 .ui.secondary.menu .item {
-  font-family: 'Ranchers', cursive;
-  color: red;
+  color: #555;
   margin: 0;
+  transition: color .1s ease;
+}
+
+.ui.secondary.menu .item:hover {
+  border-bottom: #61dafb 5px solid;
+  margin: 0;
+}
+
+.ui.card>.content, .ui.cards>.card>.content {
+  line-height: 150%;
 }
 
 .ui.menu {
   margin: 0;
+  align-items: center;
 }
 
 
@@ -162,4 +219,10 @@ form  { display: block;      }
 .crd-img {
  background-size: contain;
  height: 180px;
+}
+
+.ui.message {
+  width: 50%;
+  text-align: center;
+  left: 25%;
 }

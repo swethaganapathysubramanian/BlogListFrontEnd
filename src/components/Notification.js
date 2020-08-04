@@ -15,13 +15,13 @@ const Notification = ({ notification, type }) => {
   //7.19 7.20
   if (typeVal ==='error'){
     return(
-      <Message color='red'>
+      <Message color='red' compact >
         {message}
       </Message>
     )
   } else if (typeVal === 'notification'){
     return (
-      <Message color='green'>
+      <Message color='green' compact>
         {message}
       </Message>
     )

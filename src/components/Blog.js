@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { Card, Icon, Image, Button, Label } from 'semantic-ui-react'
-import image from '../images/noimage.jpg'
-
+import image from '../images/1noimage.jpg'
+import blogimage from '../images/blog_img.png'
 
 const Blog = ({ blog, updateBlog, deleteBlog }) => {
 
@@ -96,12 +96,12 @@ const Blog = ({ blog, updateBlog, deleteBlog }) => {
       <img src={blog.image ? blog.image : image} className='crd-img'/>
       </Image>
       <Card.Content>
-        <Label as='a' color={colorChange(blog.blogType[0])} ribbon>
+        <Label as='a' color={colorChange(blog.blogType[0])} ribbon >
           {blog.blogType[0]?blog.blogType[0]:'Other'}
         </Label>
-        <Card.Header> <Link to={`/blogs/${blog.id}`}>{blog.title} </Link> </Card.Header>
-        <Card.Meta>
-          <span className='date'>  by {blog.author} </span>
+        <Card.Header style={{ margin:'3%', textAlign:'center' }}> <Link to={`/blogs/${blog.id}`}>{blog.title} </Link> </Card.Header>
+        <Card.Meta style={{ textAlign: 'center' }}>
+          <span className='date' >  by {blog.author} </span>
         </Card.Meta>
         <Card.Description>
           {blog.desc}
@@ -110,12 +110,12 @@ const Blog = ({ blog, updateBlog, deleteBlog }) => {
       <Card.Content extra>
         <a>
           <Icon name='user' />
-          {blog.likes} Likes
-          <Button color='red' onClick={addLike}>
+          {blog.likes} Likes &nbsp;
+          <Button color='red' onClick={addLike} size='mini'>
             <Icon name='heart' />
               Like
           </Button>
-          <Button onClick={removeBlog}>
+          <Button onClick={removeBlog} size='mini'>
             Delete
           </Button>
         </a>

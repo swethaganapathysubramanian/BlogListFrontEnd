@@ -11,6 +11,7 @@ import { createBlog, likeBlog, deleteTheBlog } from '../reducers/blogReducer'
 import { initializeBlog } from '../reducers/blogReducer'
 import Login from './Login'
 import BlogModal from './BlogModal'
+import creation from '../images/creation.png'
 
 const Home = ({ blogs }) => {
   const dispatch = useDispatch()
@@ -165,13 +166,19 @@ const Home = ({ blogs }) => {
 
   console.log('user is not null')
   return (
-    <div className='home'>
-      <h2>Blogs</h2>
-      {/* 5.4 3/5 */}
+    <div>
+      <div className='heading'>
+
+        <div className='home'>
+          <img src={creation} alt="Logo" style={{ height: 200, width: 'auto' }} />
+          <h1>Blogopedia</h1>
+          <h3>A place for all <strong>Bloggers</strong> to promote their blog and <strong>Readers</strong> to read variety of wonderful blogs!!!</h3> 
+          {/* 5.4 3/5 */}
+
+          <h3> Welcome {user.name}!! &nbsp; <BlogModal handleBlogSubmit={handleBlogSubmit} user={user} /> </h3>
+          {/* 5.5 */}
+          <br /></div> </div>  <br />
       <Notification notification={notification} type={type} />
-      <h5> Welcome {user.name}!! &nbsp; <BlogModal handleBlogSubmit={handleBlogSubmit} user={user} /> </h5>
-      {/* 5.5 */}
-      <br /> <br />
       <div className='main'>
         {blogs.map(blog =>
           <Blog key={blog.id} blog={blog} updateBlog={updateBlog} deleteBlog={deleteBlog} user={user} />
