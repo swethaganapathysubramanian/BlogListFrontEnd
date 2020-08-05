@@ -149,7 +149,9 @@ form  { display: block;      }
   color: #707070;
 }
 
-
+.title.top {
+  visibility: hidden;
+}
 .title {
   text-align: center;
   font-size: 250%;

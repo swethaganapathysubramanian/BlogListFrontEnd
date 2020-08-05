@@ -8,12 +8,12 @@ const LaunchPage = ( { handleOpen, addHandleOpen }) => {
     <div className='launch'>
       <div className='l-page' >
         <div className='launch-image'>
-          <div  className='page-top'> </div>
+          <div className='page-top title top' >Blogopedia  </div>
           <img src = {posts} alt='Launch Page Image' />
           <div className='motto'>Imagine. Create. Share.</div>
         </div>
         <div className='login-bg'>
-          <div style={{ height: '15vh' }} className='title'>Blogopedia </div>
+          <div style={{ height: '15vh' }} className='title bottom'>Blogopedia </div>
           <Button id='login' className='page' animated onClick={handleOpen}>
             <Button.Content visible>Login</Button.Content>
             <Button.Content hidden>

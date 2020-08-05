@@ -54,7 +54,7 @@ const Navigationbar = ({ handleLogout }) => {
         </Menu>
       </Responsive>
       <Responsive maxWidth={600}>
-        <Sidebar.Pushable as={Segment}>
+        <Sidebar.Pushable >
           <Sidebar
             as={Menu}
             animation='push'
@@ -62,16 +62,8 @@ const Navigationbar = ({ handleLogout }) => {
             onHide={() => setVisible(false)}
             direction='top'
             visible={visible}
-            width='wide'
+            width='very thin'
           >
-            <Link to={'/'}>
-              <Menu.Item
-                name='BlogList'
-                link
-                className='menu-item' >
-              Blogopedia
-              </Menu.Item>
-            </Link>
             <Link to={'/'}>
               <Menu.Item
                 name='Blogs'

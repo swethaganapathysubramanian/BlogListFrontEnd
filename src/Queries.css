@@ -55,6 +55,69 @@
 }
 /* Small Phones : 0 to 480px */
 @media only screen and (max-width: 480px) {
+    .heading img{
+  position: absolute;
+  left: -5%;
+  top: 15%;
+}
 
+.motto {
+  font-size: 110%;
+  padding-top: 4%;
+  padding-bottom: 5%;
+  word-spacing: 1rem;
+}
+
+.launch-image img{
+    height: 28vh;
+    width: auto;
+    z-index: -999;   
+}
+
+
+.login-bg {
+   float: right;
+   width: 100vw;
+   height:50vh;
+   background-color:'#1DCAFF';
+}
+
+.page-top {
+   height: 12vh;
+}
+
+.launch-image {
+   float: left;
+   width: 100vw; 
+   text-align: center;
+}
+
+#login.ui.button {
+  width: 65%;
+  margin: 3%;
+  top: 63%;
+  left: 15%;
+}
+
+#signup.ui.button {
+  width: 65%;
+  margin: 3%;
+  top: 80%;
+  left: 15%;
+}
+
+.title.bottom{
+    visibility: hidden;
+}
+
+.title.top {
+    visibility: visible;
+    margin-top: 2%;
+    z-index: 999; 
+}
+
+.ui.form .field .ui.input input, .ui.form .fields .field .login-input.ui.input input {
+  width: 100%;
+}
     
 }
