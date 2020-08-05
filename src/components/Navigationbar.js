@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, Icon, Responsive, Segment, Sidebar } from 'semantic-ui-react'
+import { Menu, Icon, Responsive, Sidebar } from 'semantic-ui-react'
 
 
 //7.16
@@ -92,7 +92,7 @@ const Navigationbar = ({ handleLogout }) => {
               <Icon name="close" />
             </Menu.Item>
           </Sidebar>
-          <Menu secondary pointing size='large'>
+          <Menu secondary pointing size='massive'>
             <Menu.Item onClick={onToggle} style={{ float: 'right' }}>
               <Icon name="sidebar" />
             </Menu.Item>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { listUsers } from '../reducers/userReducer'
 import { Link } from 'react-router-dom'
@@ -13,7 +13,7 @@ const Users = () => {
   return(
     <div className='user'>
       <h2>Users</h2>
-      <Table striped collapsing className='user-table' color='blue' unstackable>
+      <Table striped collapsing className='user-table' color='blue' unstackable compact='very' fixed>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>Name</Table.HeaderCell>
@@ -23,12 +23,12 @@ const Users = () => {
         </Table.Header>
 
         <Table.Body>
-          {users.map(user => 
+          {users.map(user =>
             <Table.Row key={user.id}>
               <Table.Cell style={{ textTransform:'capitalize' }}><Link to={`/users/${user.id}`}>{user.username}</Link></Table.Cell>
               <Table.Cell>{user.blogs.length} Blogs</Table.Cell>
               <Table.Cell>{ user.about ? user.about : 'Hey There! I am a Blogger :)'}</Table.Cell>
-          </Table.Row>
+            </Table.Row>
           )}
         </Table.Body>
       </Table>
