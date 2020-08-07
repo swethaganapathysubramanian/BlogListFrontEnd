@@ -172,7 +172,7 @@ const Home = ({ blogs }) => {
         <div className='home'>
           <img src={creation} alt="Logo" />
           <h1>Blogopedia</h1>
-          <h3>A place for all <strong>Bloggers</strong> to promote their blog and <strong>Readers</strong> to read variety of wonderful blogs!!!</h3> 
+          <h3>A place for all <strong>Bloggers</strong> to promote their blog and <strong>Readers</strong> to read variety of wonderful blogs!!!</h3>
           {/* 5.4 3/5 */}
 
           <h3> Welcome {user.name}!! &nbsp; <BlogModal handleBlogSubmit={handleBlogSubmit} user={user} /> </h3>

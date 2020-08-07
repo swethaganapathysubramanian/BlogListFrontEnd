@@ -3,11 +3,10 @@ import { useDispatch } from 'react-redux'
 import { login } from '../reducers/loginReducer'
 import { addUser } from '../reducers/userReducer'
 import Signup from './Signup'
-import { setNotification, setType } from '../reducers/notificationReducer'
 import { useHistory } from 'react-router-dom'
 import LaunchPage from './LaunchPage'
 import { Button, Header, Modal, Form } from 'semantic-ui-react'
-import { Message } from 'semantic-ui-react'
+
 
 const Login = () => {
   const history = useHistory()
@@ -23,26 +22,17 @@ const Login = () => {
   const addHandleOpen = () => setAddModalOpen(true)
   const addHandleClose = () => setAddModalOpen(false)
 
-  const [message, setMessage] = useState('')
-  const [messageType, setMessageType] = useState('')
 
   const loginintoApp = async (event) => {
     console.log(username)
     event.preventDefault()
     try {
-      
       dispatch(login(username,password))
       history.push('/')
       //5.2 1/3
     } catch (error) {
       //5.4 2/5
       console.log(error)
-      setMessage(error)
-      setMessageType('error')
-      setTimeout(() => {
-        setMessage('')
-        setMessageType('')
-      }, 5000)
     }
   }
 

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { Card, Icon, Image, Button, Label } from 'semantic-ui-react'
 import image from '../images/1noimage.jpg'
-import blogimage from '../images/blog_img.png'
 
 const Blog = ({ blog, updateBlog, deleteBlog }) => {
 
@@ -33,67 +32,38 @@ const Blog = ({ blog, updateBlog, deleteBlog }) => {
   const colorChange = (type) => {
     console.log(type)
     switch(type){
-      case 'Art':
-      case 'Craft':
-      case 'Cooking/Food':
+    case 'Art':
+    case 'Craft':
+    case 'Cooking/Food':
       return 'orange'
-      
-      case 'Personal':
-      case 'Other':
+    case 'Personal':
+    case 'Other':
       return 'blue'
-
-      case 'Beauty/Fashion':
-      case 'Cute':
-      case 'Shopping/Reviews':
+    case 'Beauty/Fashion':
+    case 'Cute':
+    case 'Shopping/Reviews':
       return 'pink'
-    
-      case 'Technology':
-      case 'Gaming':
+    case 'Technology':
+    case 'Gaming':
       return 'black'
-
-      case 'Photography':
+    case 'Photography':
       return 'teal'
-
-      case 'Travel':
-      case 'Spiritual':
+    case 'Travel':
+    case 'Spiritual':
       return 'green'
-      
-      case 'Books/Literature':
-      case 'Parent':
-        return 'purple'
-        break
-      default:
-        return 'blue'
+    case 'Books/Literature':
+    case 'Parent':
+      return 'purple'
+    default:
+      return 'blue'
     }
 
   }
 
   return(
-    //5.7
-    // show?
-    //   <div className="segment-cover">
-    //     <Segment raised className="blog">
-    //       <div className='showBlog Blog'>
-    //         {blog.title} by {blog.author}<button onClick={toggleShow}>Hide</button> <br />
-    //         {blog.url}<br/>
-    //         {/* 5.8 */}
-    //         {blog.likes} <button onClick={addLike}>Like</button> <br />
-    //         {blog.user.username}<br/>
-    //         <button onClick={removeBlog} id='remove'>Remove</button>
-    //       </div>
-    //     </Segment>
-    //   </div>
-    //   :
-    //   <div className="segment-cover">
-    //     <Segment raised className="blog">
-    //       <div className='defaultBlog Blog'>
-    //         <Link to={`/blogs/${blog.id}`}>{blog.title} by {blog.author} </Link> <button onClick={toggleShow}>Show</button>
-    //       </div>
-    //     </Segment>
-    //   </div>
     <Card color={colorChange(blog.blogType[0])}>
       <Image wrapped ui={true} fluid centered size='small'>
-      <img src={blog.image ? blog.image : image} className='crd-img'/>
+        <img src={blog.image ? blog.image : image} className='crd-img' alt='card-img'/>
       </Image>
       <Card.Content>
         <Label as='a' color={colorChange(blog.blogType[0])} ribbon >
@@ -108,7 +78,7 @@ const Blog = ({ blog, updateBlog, deleteBlog }) => {
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a>
+        <a href='#'>
           <Icon name='user' />
           {blog.likes} Likes &nbsp;
           <Button color='red' onClick={addLike} size='mini'>
