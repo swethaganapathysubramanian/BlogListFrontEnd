@@ -63,7 +63,7 @@ const Blog = ({ blog, updateBlog, deleteBlog }) => {
   return(
     <Card color={colorChange(blog.blogType[0])}>
       <Image wrapped ui={true} fluid centered size='small'>
-        <img src={blog.image ? blog.image : image} className='crd-img' alt='card-img'/>
+        <img src={blog.image ? blog.image : image} className='crd-img' alt='card'/>
       </Image>
       <Card.Content>
         <Label as='a' color={colorChange(blog.blogType[0])} ribbon >
@@ -78,17 +78,16 @@ const Blog = ({ blog, updateBlog, deleteBlog }) => {
         </Card.Description>
       </Card.Content>
       <Card.Content extra>
-        <a href='#'>
-          <Icon name='user' />
-          {blog.likes} Likes &nbsp;
-          <Button color='red' onClick={addLike} size='mini'>
-            <Icon name='heart' />
+
+        <Icon name='user' />
+        {blog.likes} Likes &nbsp;
+        <Button color='red' onClick={addLike} size='mini'>
+          <Icon name='heart' />
               Like
-          </Button>
-          <Button onClick={removeBlog} size='mini'>
+        </Button>
+        <Button onClick={removeBlog} size='mini'>
             Delete
-          </Button>
-        </a>
+        </Button>
       </Card.Content>
     </Card>
   )

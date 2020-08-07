@@ -9,7 +9,7 @@ const LaunchPage = ( { handleOpen, addHandleOpen }) => {
       <div className='l-page' >
         <div className='launch-image'>
           <div className='page-top title top' >Blogopedia  </div>
-          <img src = {posts} alt='Launch Page Image' />
+          <img src = {posts} alt='Launch Page' />
           <div className='motto'>Imagine. Create. Share.</div>
         </div>
         <div className='login-bg'>

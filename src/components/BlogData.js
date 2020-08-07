@@ -75,7 +75,7 @@ const BlogData = ({ blogs, likeBlog, addCommentReducer }) => {
     console.log(update)
   }
 
-  const commentData = (event) =>{
+  const commentData = (event) => {
     event.preventDefault()
     setComment(event.target.value)
   }
@@ -102,7 +102,7 @@ const BlogData = ({ blogs, likeBlog, addCommentReducer }) => {
       <h2>{blog.title} </h2><h3 style={{ color:'#606060' }}> &nbsp; by {blog.author} </h3>
       <div className='blog-data'>
         <h3> Checkout the Blog @  <a href={blog.url}>{blog.url}</a> </h3> <br />
-        <img src={blog.image ? displayImage(blog.image) : blogimage} style={{ height:200, width:'auto' }} alt='blog image' draggable/> <br/> <br />
+        <img src={blog.image ? displayImage(blog.image) : blogimage} style={{ height:200, width:'auto' }} alt='blog' draggable/> <br/> <br />
         {console.log(blog.image)}
 
         <Button as='div' labelPosition='right'>
@@ -115,7 +115,7 @@ const BlogData = ({ blogs, likeBlog, addCommentReducer }) => {
           </Label>
         </Button> <br /> <br />
         {/* </Button> <button onClick={addLike}>Like</button> <br /> */}
-        This Blog was added by <strong style={{textTransform:'capitalize'}}>{blog.user.username}</strong> <br/><br/>
+        This Blog was added by <strong style={{ textTransform:'capitalize' }}>{blog.user.username}</strong> <br/><br/>
         <a href={blog.insta}><Icon color='pink' name='instagram' size='large'/></a>
         <a href={blog.facebook}><Icon color='blue' name='facebook' size='large' /></a>
         <a href={blog.twitter}><Icon color='teal' name='twitter' size='large'/></a>
@@ -126,7 +126,7 @@ const BlogData = ({ blogs, likeBlog, addCommentReducer }) => {
             Comments
           </Header>
           <ul>
-            {blog.comments.map((comment,index) => comment ? 
+            {blog.comments.map((comment,index) => comment ?
               <Comment.Group size='large'>
                 <Comment>
                   <Comment.Avatar src={imageList[index%6]}/>
